@@ -43,9 +43,29 @@ export class AuthModel {
   );
  }
 
+ getByEmail(email: string): Promise<mongoose.Document> {
+  return Promise.resolve(
+   this.model.findOne({ email })
+  );
+ }
+
  getAll(): Promise<Array<mongoose.Document>> {
   return Promise.resolve(
    this.model.find()
+  );
+ }
+
+ updateAuthById(_id: any, update: any): Promise<mongoose.Document> {
+  return Promise.resolve(
+   this.model.findByIdAndUpdate(_id, update, {
+    new: true
+   })
+  );
+ }
+
+ deleteById(_id: any): Promise<mongoose.Document> {
+  return Promise.resolve(
+   this.model.findByIdAndDelete(_id)
   );
  }
 }
