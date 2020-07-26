@@ -1,0 +1,30 @@
+{
+  "name": "Dynamics-Intelligence-Authentication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingsley-einstein/Dynamics-Intelligence-Authentication.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kingsley-einstein/Dynamics-Intelligence-Authentication/issues"
+  },
+  "homepage": "https://github.com/kingsley-einstein/Dynamics-Intelligence-Authentication#readme",
+  "dependencies": {
+    "@types/express": "^4.17.7",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/mongoose": "^5.7.32",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.25",
+    "morgan": "^1.10.0",
+    "typescript": "^3.9.7"
+  }
+}
