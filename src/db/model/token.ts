@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 export class TokenModel {
- schema: mongoose.Schema;
  model: mongoose.Model<mongoose.Document, {}>;
 
  constructor() {
@@ -9,24 +8,22 @@ export class TokenModel {
  }
 
  define(): void {
-  this.schema = new mongoose.Schema({
-   token: {
+  this.model = mongoose.model("Token", new mongoose.Schema({
+   sessionId: {
     type: String,
     required: true
    }
-  });
-
-  this.model = mongoose.model("Token", this.schema);
+  }));
  }
 
- invalidate(token: string): Promise<mongoose.Document> {
+ invalidate(sessionId: string): Promise<mongoose.Document> {
   return Promise.resolve(
-   this.model.create({ token })
+   this.model.create({ sessionId })
   );
  }
 
- async isInvalid(token: string): Promise<boolean> {
-  const t = await this.model.findOne({ token });
+ async isInvalid(sessionId: string): Promise<boolean> {
+  const t = await this.model.findOne({ sessionId });
   return Promise.resolve(!t ? false: true);
  }
 }

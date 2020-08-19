@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
+import { Hash } from "../../helpers";
 
 export class AuthModel {
- schema: mongoose.Schema;
  model: mongoose.Model<mongoose.Document, {}>;
  
  constructor() {
@@ -9,7 +9,8 @@ export class AuthModel {
  }
 
  define(): void {
-  this.schema = new mongoose.Schema({
+  // Create schema
+  const schema = new mongoose.Schema({
    firstName: {
     type: String,
     required: true
@@ -28,7 +29,25 @@ export class AuthModel {
    }
   });
 
-  this.model = mongoose.model("User", this.schema);
+  // Instantiate a variable as the global "this"
+  const that = this;
+
+  // Define "pre" hooks on model
+  schema.pre("save", function(next) {
+   const doc = this as mongoose.Document & { password: string; };
+   if (doc.isModified("password"))
+    doc.password = Hash.create(doc.password);
+   next();
+  });
+
+  schema.pre("findOneAndUpdate", async function(next) {
+   const doc = await that.model.findOne(this.getFilter()) as mongoose.Document & { password: string; };
+   if (doc.isModified("password"))
+    doc.password = Hash.create(doc.password);
+   next();
+  });
+
+  this.model = mongoose.model("User", schema);
  }
 
  create(body: any): Promise<mongoose.Document> {

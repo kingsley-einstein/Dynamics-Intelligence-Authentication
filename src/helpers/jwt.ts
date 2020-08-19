@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 
 export class JWT {
  static encode(payload: any): string {
-  return jwt.sign({...payload}, "", {
+  return jwt.sign({ ...payload }, "", {
    expiresIn: "7d"
   });
  }
