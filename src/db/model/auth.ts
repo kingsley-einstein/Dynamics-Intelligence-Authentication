@@ -21,9 +21,16 @@ export class AuthModel {
    },
    email: {
     type: String,
-    required: true
+    required: true,
+    unique: {
+     message: "Email already registered."
+    }
    },
    password: {
+    type: String,
+    required: true
+   },
+   phoneNumber: {
     type: String,
     required: true
    }

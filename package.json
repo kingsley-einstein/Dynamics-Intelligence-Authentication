@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build",
+    "build": "tsc -p .",
+    "clean:build": "npm run clean && npm run build",
+    "dev": "export NODE_ENV=development && npm run clean:build && node build/index"
   },
   "repository": {
     "type": "git",
@@ -22,6 +26,7 @@
     "@types/jsonwebtoken": "^8.5.0",
     "@types/mongoose": "^5.7.32",
     "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.25",
