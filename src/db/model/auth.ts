@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { Hash } from "../../helpers";
 
 export class AuthModel {
- model: mongoose.Model<mongoose.Document, {}>;
+ public model: mongoose.Model<mongoose.Document, {}>;
  
  constructor() {
   this.define();
@@ -47,12 +47,12 @@ export class AuthModel {
    next();
   });
 
-  schema.pre("findOneAndUpdate", async function(next) {
-   const doc = await that.model.findOne(this.getFilter()) as mongoose.Document & { password: string; };
-   if (doc.isModified("password"))
-    doc.password = Hash.create(doc.password);
-   next();
-  });
+  // schema.pre("findOneAndUpdate", async function(next) {
+  //  const doc = await that.model.findOne(this.getFilter()) as mongoose.Document & { password: string; };
+  //  if (doc.isModified("password"))
+  //   doc.password = Hash.create(doc.password);
+  //  next();
+  // });
 
   this.model = mongoose.model("User", schema);
  }

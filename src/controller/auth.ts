@@ -12,10 +12,12 @@ export class AuthController {
 
    // API response
    const response = {
+    id: user._id,
     email: user.email,
     fullName: `${user.firstName} ${user.lastName}`,
     phoneNumber: user.phoneNumber,
     token: JWT.encode({
+     id: user._id,
      email: user.email,
      fullName: `${user.firstName} ${user.lastName}`,
      phoneNumber: user.phoneNumber,
@@ -52,10 +54,12 @@ export class AuthController {
    
    // API response
    const response = {
+    id: user._id,
     email: user.email,
     fullName: `${user.firstName} ${user.lastName}`,
     phoneNumber: user.phoneNumber,
     token: JWT.encode({
+     id: user._id,
      email: user.email,
      fullName: `${user.firstName} ${user.lastName}`,
      phoneNumber: user.phoneNumber,
@@ -80,10 +84,11 @@ export class AuthController {
  static async getUserWithSession(req: express.Request & { user: any; }, res: express.Response): Promise<any> {
   try {
    // Get user details from request
-   const { email, fullName, sessionId, phoneNumber } = req.user;
+   const { id, email, fullName, sessionId, phoneNumber } = req.user;
 
    //API response
    const response = {
+    id,
     email,
     fullName,
     sessionId,
@@ -111,7 +116,8 @@ export class AuthController {
     return {
      email: user.email,
      fullName: `${user.firstName} ${user.lastName}`,
-     phoneNumber: user.phoneNumber
+     phoneNumber: user.phoneNumber,
+     id: user._id
     };
    });
 
@@ -137,6 +143,39 @@ export class AuthController {
    res.status(200).json({
     statusCode: 200,
     response: invalidSession
+   });
+  } catch (error) {
+   res.status(500).json({
+    statusCode: 500,
+    response: error.message
+   });
+  }
+ }
+
+ static async updateUser(req: express.Request & { user: any }, res: express.Response): Promise<any> {
+  try {
+   // Get user id
+   const { id } = req.user;
+
+   // Hash password if the password field is present in the request body
+   if (req.body.password)
+    req.body.password = Hash.create(req.body.password);
+
+   // Update user
+   const user: any = await Authentication.updateAuthById(id, req.body);
+
+   // API response
+   const response = {
+    email: user.email,
+    id: user._id,
+    fullName: `${user.firstName} ${user.lastName}`,
+    phoneNumber: user.phoneNumber
+   };
+
+   // Send response
+   res.status(200).json({
+    statusCode: 200,
+    response
    });
   } catch (error) {
    res.status(500).json({

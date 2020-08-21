@@ -23,6 +23,11 @@ router.get(
  AuthMiddleware.checkToken,
  AuthController.logout
 );
+router.patch(
+ "/update",
+ AuthMiddleware.checkToken,
+ AuthController.updateUser
+);
 
 // Export router for use
 export default router;
