@@ -11,6 +11,8 @@ router.post(
  AuthMiddleware.checkIfUserExists,
  AuthController.create
 );
+router.get("/verify", AuthController.verify);
+router.post("/request_ver_link", AuthController.requestNewVerificationLink);
 router.post("/login", AuthController.login);
 router.get(
  "/getloggeduser",

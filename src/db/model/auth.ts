@@ -33,6 +33,10 @@ export class AuthModel {
    phoneNumber: {
     type: String,
     required: true
+   },
+   isVerified: {
+    type: Boolean,
+    default: false
    }
   });
 
