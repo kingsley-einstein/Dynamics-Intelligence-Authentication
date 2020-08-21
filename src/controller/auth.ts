@@ -167,12 +167,14 @@ export class AuthController {
     email: user.email,
     fullName: `${user.firstName} ${user.lastName}`,
     phoneNumber: user.phoneNumber,
+    verified: user.isVerified,
     token: JWT.encode({
      id: user._id,
      email: user.email,
      fullName: `${user.firstName} ${user.lastName}`,
      phoneNumber: user.phoneNumber,
      password: user.password,
+     verified: user.isVerified,
      sessionId: uuid()
     }) 
    };

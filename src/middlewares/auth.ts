@@ -48,6 +48,22 @@ export class AuthMiddleware {
   }
  }
 
+ static async checkIfVerified(req: express.Request & { user: any; }, res: express.Response, next: express.NextFunction) {
+  try {
+   // Throw error if user is not verified
+   if (!req.user.verified)
+    throw new CustomError(400, "User is not verified");
+   
+   // Pass control to the next function
+   next();
+  } catch (error) {
+   res.status(error.c || 500).json({
+    statusCode: error.c || 500,
+    response: error.message
+   });
+  }
+ }
+
  static async checkIfUserExists(req: express.Request, res: express.Response, next: express.NextFunction) {
   try {
    // Find user to see if they exist as members

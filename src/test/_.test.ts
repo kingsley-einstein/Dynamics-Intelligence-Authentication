@@ -11,13 +11,14 @@ const lastName = "Sequia";
 const phoneNumber = "+44-9837773636";
 const password = "testpassword";
 const email = "adolphsequia@app.com";
+const isVerified = true;
 
 describe("TESTS", () => {
  describe("AUTHENTICATION TESTS WITH SUCCESS RESPONSES", () => {
   it("should create user", (done) => {
    request(app)
     .post(API_ROOT + "/create")
-    .send({ firstName, lastName, phoneNumber, password, email })
+    .send({ firstName, lastName, phoneNumber, password, email, isVerified })
     .end((err, res) => {
      console.table([res.body.response]);
      expect(res.status).to.be.eql(201);

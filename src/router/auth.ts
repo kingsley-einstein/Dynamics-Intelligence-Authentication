@@ -17,6 +17,7 @@ router.post("/login", AuthController.login);
 router.get(
  "/getloggeduser",
  AuthMiddleware.checkToken,
+ AuthMiddleware.checkIfVerified,
  AuthController.getUserWithSession
 );
 router.get("/users", AuthController.getAllUsers);
