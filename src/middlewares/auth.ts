@@ -52,7 +52,7 @@ export class AuthMiddleware {
   try {
    // Throw error if user is not verified
    if (!req.user.verified)
-    throw new CustomError(400, "User is not verified");
+    throw new CustomError(400, "Only verified users can access this resource.");
    
    // Pass control to the next function
    next();

@@ -29,6 +29,7 @@ router.get(
 router.patch(
  "/update",
  AuthMiddleware.checkToken,
+ AuthMiddleware.checkIfVerified,
  AuthController.updateUser
 );
 

@@ -113,6 +113,10 @@ export class AuthController {
    // Find user
    const user: any = await Authentication.getByEmail(req.body.email);
 
+   // Throw error if user was not found
+   if (!user)
+    throw new CustomError(404, "User not found");
+
    // Sign a new token
    const token = JWT.encode({
     id: user._id,

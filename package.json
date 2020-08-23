@@ -8,8 +8,13 @@
     "clean": "rm -rf build",
     "build": "tsc -p .",
     "clean:build": "npm run clean && npm run build",
-    "dev": "export NODE_ENV=development && npm run clean:build && node build/index",
-    "test:local": "export NODE_ENV=test && npm run clean:build && npm test"
+    "start": "npm run clean:build && node build/index",
+    "dev": "export NODE_ENV=development && npm start",
+    "test:local": "export NODE_ENV=test && npm run clean:build && npm test",
+    "prod": "export NODE_ENV=production && npm start",
+    "start:windows": "npm run build && node build/index",
+    "dev:windows": "set NODE_ENV=development&& npm run start:windows",
+    "test:windows": "set NODE_ENV=test&& npm run build && npm test"
   },
   "repository": {
     "type": "git",
