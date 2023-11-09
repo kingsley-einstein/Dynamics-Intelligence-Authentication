@@ -1,0 +1,433 @@
+repo_name: kingsley-einstein/Dynamics-Intelligence-Authentication
+report_id: b1385b63785fd696bf57c1dbf996fe46
+repo_type: Public
+timestamp: '2023-11-09T20:15:11+00:00'
+requested_by: kingsley-einstein
+provider: github
+branch: master
+detected_tools_count: 30
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-19 21:18:59.000000000 Z
+- name: TypeScript
+  description: A superset of JavaScript that compiles to clean JavaScript output
+  website_url: http://www.typescriptlang.org
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source: Repo Metadata
+- name: ExpressJS
+  description: Sinatra inspired web development framework for node.js -- insanely
+    fast, flexible, and simple
+  website_url: http://expressjs.com/
+  version: 4.17.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Microframeworks (Backend)
+  image_url: https://img.stackshare.io/service/1163/hashtag.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-07-26 04:32:29.000000000 Z
+- name: Node.js
+  description: A platform built on Chrome's JavaScript runtime for easily building
+    fast, scalable network applications
+  website_url: http://nodejs.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source: Dockerfile
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-23 22:23:06.000000000 Z
+- name: MongoDB
+  description: The database for giant ideas
+  website_url: http://www.mongodb.com/
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1030/leaf-360x360.png
+  detection_source: ".travis.yml"
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 14:33:01.000000000 Z
+- name: Mongoose
+  description: MongoDB object modeling designed to work in an asynchronous environment
+  website_url: http://mongoosejs.com/
+  version: 5.9.25
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Object Document Mapper (ODM)
+  image_url: https://img.stackshare.io/service/1231/0TXzZU7W_400x400.jpg
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-07-26 04:32:29.000000000 Z
+- name: Chai
+  description: A BDD / TDD assertion library
+  website_url: http://chaijs.com/
+  version: 4.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/1725/chai.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-07-26 04:32:29.000000000 Z
+- name: Coveralls
+  description: Track your project's code coverage over time, changes to files, and
+    badge your GitHub repo
+  website_url: https://coveralls.io/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Code Coverage
+  image_url: https://img.stackshare.io/service/680/a43e4a04cb9f778842de43f95db59a14.png
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 03:02:12.000000000 Z
+- name: Docker
+  description: Enterprise Container Platform for High-Velocity Innovation.
+  website_url: https://www.docker.com/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Virtual Machine Platforms & Containers
+  image_url: https://img.stackshare.io/service/586/n4u37v9t_400x400.png
+  detection_source: Repo Metadata
+- name: Dotenv
+  description: Loads environment variables from .env for Nodejs projects
+  website_url: https://github.com/motdotla/dotenv
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Server Configuration and Automation
+  image_url: https://img.stackshare.io/service/8067/default_90dcb1286af7685c68df319c764b80704df1155b.png
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-20 12:24:51.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: Mocha
+  description: Simple, flexible, fun javascript test framework for node.js &amp; the
+    browser
+  website_url: http://mochajs.org/
+  version: 8.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/832/mocha.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 03:02:12.000000000 Z
+- name: SuperTest
+  description: 'A library for testing node.js HTTP servers '
+  website_url: https://www.npmjs.com/package/supertest
+  version: 4.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 03:02:12.000000000 Z
+- name: Travis CI
+  description: A hosted continuous integration service for open source and private
+    projects
+  website_url: http://travis-ci.com/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png
+  detection_source: ".travis.yml"
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 14:33:01.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-07-26 04:32:29.000000000 Z
+- name: Nodemailer
+  description: A module for Node.js applications to allow email sending
+  website_url: http://www.nodemailer.com/
+  open_source: true
+  hosted_saas: false
+  category: Communications
+  sub_category: Transactional Email
+  image_url: https://img.stackshare.io/service/2862/qr2-jCLr.jpg
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 14:33:01.000000000 Z
+- name: "@types/chai"
+  description: TypeScript definitions for chai
+  package_url: https://www.npmjs.com/@types/chai
+  version: 4.2.12
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15922/default_e0a4fb1126d7400f419f0931cf1669947a5bc552.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 14:33:01.000000000 Z
+- name: "@types/express"
+  description: TypeScript definitions for Express
+  package_url: https://www.npmjs.com/@types/express
+  version: 4.17.7
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16100/default_d947c1690e032a288145c7e2491999eab3ea8ede.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 14:33:01.000000000 Z
+- name: "@types/jsonwebtoken"
+  description: TypeScript definitions for jsonwebtoken
+  package_url: https://www.npmjs.com/@types/jsonwebtoken
+  version: 8.5.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16959/default_caea01ce44a5fd1bb200d8fc0f8f2a1695b4e569.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 14:33:01.000000000 Z
+- name: "@types/mocha"
+  description: TypeScript definitions for mocha
+  package_url: https://www.npmjs.com/@types/mocha
+  version: 8.0.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15893/default_1d65e37e65b7f80761374f0202776043277d505d.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 14:33:01.000000000 Z
+- name: "@types/mongoose"
+  description: TypeScript definitions for Mongoose
+  package_url: https://www.npmjs.com/@types/mongoose
+  version: 5.7.32
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16898/default_884deeafc4d4b680b6d9cb7e3759ba2db025e8e7.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 14:33:01.000000000 Z
+- name: "@types/supertest"
+  description: TypeScript definitions for SuperTest
+  package_url: https://www.npmjs.com/@types/supertest
+  version: 2.0.10
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16805/default_31a4e0e11d348225088320f3a5c5ea6fa49c27ad.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-23 22:23:06.000000000 Z
+- name: "@types/uuid"
+  description: TypeScript definitions for uuid
+  package_url: https://www.npmjs.com/@types/uuid
+  version: 8.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16257/default_ab17554b7e80af3d234b14168ed61e75d43f8eee.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 14:33:01.000000000 Z
+- name: bcryptjs
+  description: Optimized bcrypt in plain JavaScript with zero dependencies
+  package_url: https://www.npmjs.com/bcryptjs
+  version: 2.4.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16857/default_627f05e6a07ce29fc9f119417270f38e8aa5c5e2.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-19 21:18:59.000000000 Z
+- name: express
+  description: Fast, unopinionated, minimalist web framework
+  package_url: https://www.npmjs.com/express
+  version: 4.17.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15818/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-07-26 04:32:29.000000000 Z
+  vulnerabilities:
+  - name: qs vulnerable to Prototype Pollution
+    cve_id: CVE-2022-24999
+    cve_url: https://github.com/advisories/GHSA-hrpp-h998-j3pp
+    detected_date: Dec 7
+    severity: high
+    first_patched: 4.17.3
+- name: jsonwebtoken
+  description: JSON Web Token implementation
+  package_url: https://www.npmjs.com/jsonwebtoken
+  version: 8.5.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16155/default_77b54a203c743d16eddb6b6390cba17218454fa0.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-07-26 04:32:29.000000000 Z
+  vulnerabilities:
+  - name: jsonwebtoken has insecure input validation in jwt.verify function
+    cve_id: CVE-2022-23529
+    cve_url: https://github.com/advisories/GHSA-27h2-hvpr-p74q
+    detected_date: Dec 22
+    severity: high
+    first_patched: 9.0.0
+  - name: 'jsonwebtoken unrestricted key type could lead to legacy keys usage '
+    cve_id: CVE-2022-23539
+    cve_url: https://github.com/advisories/GHSA-8cf7-32gw-wr33
+    detected_date: Dec 22
+    severity: moderate
+    first_patched: 9.0.0
+  - name: jsonwebtoken vulnerable to signature validation bypass due to insecure default
+      algorithm in jwt.verify()
+    cve_id: CVE-2022-23540
+    cve_url: https://github.com/advisories/GHSA-qwph-4952-7xr6
+    detected_date: Dec 22
+    severity: moderate
+    first_patched: 9.0.0
+  - name: jsonwebtoken's insecure implementation of key retrieval function could lead
+      to Forgeable Public/Private Tokens from RSA to HMAC
+    cve_id: CVE-2022-23541
+    cve_url: https://github.com/advisories/GHSA-hjrf-2m68-5959
+    detected_date: Dec 22
+    severity: moderate
+    first_patched: 9.0.0
+- name: mocha-lcov-reporter
+  description: LCOV reporter for Mocha
+  package_url: https://www.npmjs.com/mocha-lcov-reporter
+  version: 1.3.0
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16120/default_63a34654baee757196ddff2457bd1c9a0dfb7287.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-23 22:23:06.000000000 Z
+- name: morgan
+  description: HTTP request logger middleware for node.js
+  package_url: https://www.npmjs.com/morgan
+  version: 1.10.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16097/default_c7b204838197013798409fa2b4dafce450edc7fb.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-07-26 04:32:29.000000000 Z
+- name: nyc
+  description: The Istanbul command line interface
+  package_url: https://www.npmjs.com/nyc
+  version: 15.1.0
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15837/default_1d65e37e65b7f80761374f0202776043277d505d.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-07-26 04:32:29.000000000 Z
+- name: uuid
+  description: RFC4122
+  package_url: https://www.npmjs.com/uuid
+  version: 3.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15916/default_e0a4fb1126d7400f419f0931cf1669947a5bc552.png
+  detection_source_url: package-lock.json
+  detection_source: package.json
+  last_updated_by: Kingsley Victor
+  last_updated_on: 2020-08-21 03:02:12.000000000 Z
